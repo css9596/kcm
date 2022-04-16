@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
+<link href="../css/bootstrap.min.css"
+      th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
 <head>
     <meta charset="UTF-8">
     <title>Thymeleaf Test</title>
 </head>
 <body>
     <p th:text="${hello}">message</p>
+    <p th:text="${aa}">message</p>
+    <p th:text="${result}">API Data</p>
     <div>
         안녕하세요.
     </div>
