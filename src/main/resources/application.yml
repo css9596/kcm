@@ -1,0 +1,29 @@
+# ?? ?? ?? ??(??info)
+logging:
+  level:
+    root: info
+# Http ????? ??
+    org:
+      apache:
+        coyote:
+          http11: debug
+
+# 공공 API KEY 설정
+commonApiKey:
+  toilet:
+    encode: Bbz7LkVXSe738w8odDA8b%2BXdz6NlskGH%2BakED8G4xonkDxXzjbQn%2B6kUWWiFNE8roPiAHxn48KqUqnXE61mnXQ%3D%3D
+    decode: Bbz7LkVXSe738w8odDA8b+Xdz6NlskGH+akED8G4xonkDxXzjbQn+6kUWWiFNE8roPiAHxn48KqUqnXE61mnXQ==
+
+# Context Path 설정
+server:
+  servlet:
+    context-path: /
+
+# Thymeleaf 캐싱 사용여부
+# false : 서버 재시작 없이 바로 확인 가능
+spring:
+  thymeleaf:
+    cache: false
+    suffix: .html
+
+
