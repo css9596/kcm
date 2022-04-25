@@ -1,6 +1,7 @@
 package kcm.project.commonApi.kakaoMap.toilet.controller;
 
 import kcm.project.commonApi.kakaoMap.toilet.service.ToiletService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,8 +16,9 @@ import javax.annotation.Resource;
  * @version
  * v1.0 2022.04.23 choisungsik 최초작성
  */
+@Slf4j
 @Controller
-@RequestMapping(name = "/toilet")
+@RequestMapping(value = "/toilet")
 public class ToiletController {
 
     @Resource(name = "toiletService")
