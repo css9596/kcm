@@ -1,4 +1,4 @@
-package toilet.kcm.controller;
+package kcm.project.commonApi.test;
 
 import ch.qos.logback.core.net.SyslogOutputStream;
 

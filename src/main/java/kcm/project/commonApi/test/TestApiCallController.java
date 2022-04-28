@@ -1,4 +1,4 @@
-package toilet.kcm.controller;
+package kcm.project.commonApi.test;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,7 +15,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Controller
-public class ApiCallController {
+public class TestApiCallController {
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String ApiCallTest(Model model) throws UnsupportedEncodingException {
@@ -104,5 +104,7 @@ public class ApiCallController {
 
         return "/index";
     }
+
+
 
 }
