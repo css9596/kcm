@@ -2,6 +2,7 @@ package kcm.project.commonApi.test;
 
 import ch.qos.logback.core.net.SyslogOutputStream;
 
+import java.util.Map;
 import java.util.Scanner;
 
 public class SoheeCalc {
@@ -16,6 +17,8 @@ public class SoheeCalc {
         System.out.print("첫번째 숫자 : ");
         a = num(a);
 
+
+
         if(isInt(a) == true) {
             System.out.print("두번째 숫자 : ");
             //b = scan.nextInt();
@@ -27,7 +30,7 @@ public class SoheeCalc {
         if(isInt(b) == true) {
             System.out.print("부호 : ");
             sign = scan.next();
-            isSign(sign,a,b);
+            System.out.println(isSign(sign,a,b));
         }else{
             System.out.print("숫자를 입력하세요");
         }
@@ -53,19 +56,20 @@ public class SoheeCalc {
 
     // 사칙연산 부호와 숫자 2개를 입력받는 메소드
     public static Object isSign(String str, int a, int b){
+
         String sign = str;
         int x = a;
         int y = b;
-        Object result = 0;
+        int result = 0;
 
         //null check
 
-//        System.out.println(a + sign + b + "=" + (a + sign + b));
+        System.out.println(a + sign + b + "=" + (a + b));
 
         if (sign.equals("+")) {
             System.out.println(a + "+" + b + "=" + (a + b));
 //            result = System.out.println(a + "++" + b + "=" + (a + b));
-//            result = a+b;
+            result = a+b;
         } else if (str.equals("-")) {
             System.out.println(a + "-" + b + "=" + (a - b));
 //            result = a-b;
@@ -75,9 +79,16 @@ public class SoheeCalc {
         } else if (str.equals("/")) {
             System.out.println(a + "/" + b + "=" + (a / b));
 //            result = a/b;
-        } else {
-            System.out.println("부호를 다시 입력하세요!");
         }
+        return result;
+    }
+
+    public static boolean isNull(String str){
+        boolean result = false;
+
+        if(str == null || str.length() == 0)
+            return  true;
+
         return result;
     }
 }
