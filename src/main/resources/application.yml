@@ -8,11 +8,22 @@ logging:
         coyote:
           http11: debug
 
+common:
+  config:
+    isReal: false
+
+### API KEY ###
 # 공공 API KEY 설정
 commonApiKey:
   toilet:
     encode: Bbz7LkVXSe738w8odDA8b%2BXdz6NlskGH%2BakED8G4xonkDxXzjbQn%2B6kUWWiFNE8roPiAHxn48KqUqnXE61mnXQ%3D%3D
     decode: Bbz7LkVXSe738w8odDA8b+Xdz6NlskGH+akED8G4xonkDxXzjbQn+6kUWWiFNE8roPiAHxn48KqUqnXE61mnXQ==
+
+# KakaoMap Api Key
+kakao:
+  api:
+    map:
+      key: cfa7ba81fdea2502adccd1b02012f9fd
 
 # Context Path 설정
 server:
@@ -25,5 +36,6 @@ spring:
   thymeleaf:
     cache: false
     suffix: .html
+
 
 
