@@ -9,13 +9,18 @@ import org.springframework.web.bind.annotation.*;
 import javax.annotation.Resource;
 
 @Controller
-@RequestMapping(value = "/manager")
+@RequestMapping(value = "/toilet/manager")
 public class ManagerController {
 
     @Resource
     ManagerService managerService;
 
     @GetMapping
+    public String join(){
+        return "/manager/joinForm";
+    }
+
+    @PostMapping
     @ResponseBody
     public String join(@ModelAttribute Manager manager){
         Manager joinManager = managerService.join(manager);
