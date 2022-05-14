@@ -21,6 +21,9 @@ public class MemberController {
     //회원가입
     @RequestMapping(value = "/signUp")
     public String signUp(Model model){
+        logger.info("회원가입 페이지");
+        memberService.signUp(model);
+        logger.info("memberService.signUp 성공");
         model.addAttribute("test","가입테스트");
         return "redirect:/member/signUp/signUp";
     }
